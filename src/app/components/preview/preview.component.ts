@@ -9,7 +9,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class PreviewComponent {
   form = new FormGroup({
-    mode: new FormControl('light'),
+    mode: new FormControl('dark'),
   });
   changeMode(m: 'light' | 'dark') {
     let body = this.d.querySelector('body');

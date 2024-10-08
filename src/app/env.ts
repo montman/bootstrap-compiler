@@ -1,11 +1,11 @@
 export type VariableStatus = {
   name: string,
   value: string,
-  unit?: string,
 }
 export type Variable = VariableStatus & {
   description: string;
   group: string;
+  unit?: string;
 };
 export const OVERRIDABLE_VARIABLES: Variable[] = [
   {
@@ -56,14 +56,6 @@ export const OVERRIDABLE_VARIABLES: Variable[] = [
     group: 'COLORS',
     description: 'Dark Color',
   },
-  {
-    name: 'font-size-base',
-    value: '1',
-    group: 'FONT',
-    description: 'Base Font Size (rem)',
-    unit: 'rem'
-  },
 ];
 
 export const COLOR_VARIABLES: Variable[] = OVERRIDABLE_VARIABLES.filter(el => el.group == 'COLORS')
-export const FONT_VARIABLES: Variable[] = OVERRIDABLE_VARIABLES.filter(el => el.group == 'FONT')

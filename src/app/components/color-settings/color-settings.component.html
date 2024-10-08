@@ -1,7 +1,0 @@
-<h5>Colors</h5>
-<form [formGroup]="colorForm">
-    <div *ngFor="let color of colors" class="mb-2">
-        <p class="mb-0">{{color.description}}</p>
-        <input  class="form-control form-control-color w-100" type="color" [formControlName]="color.name">
-    </div>
-</form>

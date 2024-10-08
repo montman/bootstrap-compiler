@@ -1,7 +1,7 @@
 <h5>Buttons</h5>
 <div class="row mb-2" *ngFor="let c of colors">
     <div class="col">
-        <button [ngClass]="'w-100 btn btn-'+c.name">{{c.description}}</button>
+        <button  [ngClass]="'w-100 btn btn-'+c.name">{{c.description}}</button>
     </div>
     <div class="col">
         <button [ngClass]="'w-100 btn btn-outline-'+c.name">{{c.description}} - Outline</button>
