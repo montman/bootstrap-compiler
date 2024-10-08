@@ -8,9 +8,12 @@ import { BsSettingsComponent } from './components/bs-settings/bs-settings.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { PreviewComponent } from './components/preview/preview.component';
+import { ColorSettingsComponent } from './components/color-settings/color-settings.component';
+import { ButtonPreviewComponent } from './components/preview/button-preview/button-preview.component';
+import { FontSettingsComponent } from './components/bs-settings/font-settings/font-settings.component';
 
 @NgModule({
-  declarations: [AppComponent, BsSettingsComponent, PreviewComponent],
+  declarations: [AppComponent, BsSettingsComponent, PreviewComponent, ColorSettingsComponent, ButtonPreviewComponent, FontSettingsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

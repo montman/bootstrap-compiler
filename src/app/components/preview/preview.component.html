@@ -1,1 +1,13 @@
-<button class="btn btn-primary w-100">Button</button>
+<div class="container-fluid">
+    <form [formGroup]="form">
+
+        <div class="btn-group w-100 mb-2" role="group" aria-label="Basic radio toggle button group">
+            <input value="light" formControlName="mode" name="mode" type="radio" class="btn-check" id="btnradio1" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio1">Light Mode</label>
+            
+            <input value="dark" formControlName="mode" name="mode" type="radio" class="btn-check" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio2">Dark Mode</label>
+        </div>
+    </form>
+    <app-button-preview></app-button-preview>
+</div>

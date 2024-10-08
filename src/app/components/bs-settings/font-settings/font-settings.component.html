@@ -1,0 +1,7 @@
+<h5>Font Settings</h5>
+<form [formGroup]="fontForm">
+    <div *ngFor="let value of values" class="mb-2">
+        <p class="mb-0">{{value.description}}</p>
+        <input  class="form-control w-100" type="number" [formControlName]="value.name">
+    </div>
+</form>

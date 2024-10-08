@@ -9,11 +9,4 @@ import { CompileService } from '../../services/compile.service';
   styleUrl: './bs-settings.component.scss',
 })
 export class BsSettingsComponent {
-  primaryColor: FormControl = new FormControl('#ffaabb');
-  sassSource?: string;
-  constructor(private compile: CompileService) {
-    this.primaryColor.valueChanges.subscribe((el) => {
-      this.compile.compile(el);
-    });
-  }
 }
