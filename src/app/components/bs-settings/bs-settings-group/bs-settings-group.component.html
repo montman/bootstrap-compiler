@@ -1,0 +1,6 @@
+<form [formGroup]="form">
+    <div *ngFor="let v of variables; index as i" class="mb-2">
+        <label [for]="i" class="form-label">{{v.description}}</label>
+        <input [id]="i" [ngClass]="className" [formControlName]="v.name" [type]="formType" [step]="step">
+    </div>
+</form>

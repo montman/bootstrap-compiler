@@ -4,58 +4,93 @@ export type VariableStatus = {
 }
 export type Variable = VariableStatus & {
   description: string;
-  group: string;
   unit?: string;
 };
-export const OVERRIDABLE_VARIABLES: Variable[] = [
+export const COLOR_VARIABLES: Variable[] = [
   {
     name: 'primary',
     value: '#0d6efd',
-    group: 'COLORS',
     description: 'Primary Color',
   },
   {
     name: 'secondary',
     value: '#6c757d',
-    group: 'COLORS',
     description: 'Secondary Color',
   },
   {
     name: 'success',
     value: '#198754',
-    group: 'COLORS',
     description: 'Success Color',
   },
   {
     name: 'info',
     value: '#0dcaf0',
-    group: 'COLORS',
     description: 'Info Color',
   },
   {
     name: 'warning',
     value: '#ffc107',
-    group: 'COLORS',
     description: 'Warning Color',
   },
   {
     name: 'danger',
     value: '#dc3545',
-    group: 'COLORS',
     description: 'Danger Color',
   },
   {
     name: 'light',
     value: '#f8f9fa',
-    group: 'COLORS',
     description: 'Light Color',
   },
   {
     name: 'dark',
     value: '#212529',
-    group: 'COLORS',
     description: 'Dark Color',
   },
 ];
-
-export const COLOR_VARIABLES: Variable[] = OVERRIDABLE_VARIABLES.filter(el => el.group == 'COLORS')
+export const FONT_VARIABLES: Variable[] = [
+  {
+    name: 'font-size-base',
+    value: '1',
+    description: 'Base Font Size',
+    unit: "rem"
+  }
+];
+export const RADIUS_VARIABLES: Variable[] = [
+  {
+    name: 'border-radius',
+    value: '0.375',
+    description: 'Base Border Radius',
+    unit: "rem"
+  },
+  {
+    name: 'border-radius-sm',
+    value: '0.25',
+    description: 'Small Border Radius',
+    unit: "rem"
+  },
+  {
+    name: 'border-radius-lg',
+    value: '0.5',
+    description: 'Large Border Radius',
+    unit: "rem"
+  },
+  {
+    name: 'border-radius-xl',
+    value: '1',
+    description: 'XL Border Radius',
+    unit: "rem"
+  },
+  {
+    name: 'border-radius-xxl',
+    value: '2',
+    description: 'XXL Border Radius',
+    unit: "rem"
+  },
+  {
+    name: 'border-radius-pill',
+    value: '50',
+    description: 'Pill Border Radius',
+    unit: "rem"
+  },
+];

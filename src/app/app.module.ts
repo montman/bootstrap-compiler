@@ -9,9 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { PreviewComponent } from './components/preview/preview.component';
 import { ButtonPreviewComponent } from './components/preview/button-preview/button-preview.component';
+import { BsSettingsGroupComponent } from './components/bs-settings/bs-settings-group/bs-settings-group.component';
 
 @NgModule({
-  declarations: [AppComponent, BsSettingsComponent, PreviewComponent, ButtonPreviewComponent],
+  declarations: [AppComponent, BsSettingsComponent, PreviewComponent, ButtonPreviewComponent, BsSettingsGroupComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

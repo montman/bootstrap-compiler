@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { COLOR_VARIABLES } from '../../../env';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-button-preview',
@@ -7,5 +8,8 @@ import { COLOR_VARIABLES } from '../../../env';
   styleUrl: './button-preview.component.scss'
 })
 export class ButtonPreviewComponent {
+  form = new FormGroup({
+    size: new FormControl(''),
+  });
   colors = COLOR_VARIABLES;
 }

@@ -1,9 +1,21 @@
-<h5>Buttons</h5>
+<h4>Buttons</h4>
+<form [formGroup]="form">
+
+    <div class="btn-group w-100 mb-2" role="group" aria-label="Basic radio toggle button group">
+        <input value="sm" formControlName="size" name="size" type="radio" class="btn-check" id="buttonsize1" autocomplete="off">
+        <label class="btn btn-outline-primary" for="buttonsize1">Small</label>
+        <input value="" formControlName="size" name="size" type="radio" class="btn-check" id="buttonsize2" autocomplete="off">
+        <label class="btn btn-outline-primary" for="buttonsize2">Normal</label>
+        
+        <input value="lg" formControlName="size" name="size" type="radio" class="btn-check" id="buttonsize3" autocomplete="off">
+        <label class="btn btn-outline-primary" for="buttonsize3">Large</label>
+    </div>
+</form>
 <div class="row mb-2" *ngFor="let c of colors">
     <div class="col">
-        <button  [ngClass]="'w-100 btn btn-'+c.name">{{c.description}}</button>
+        <button  [ngClass]="'w-100 btn btn-'+ form.value.size +' btn-'+c.name">{{c.description}}</button>
     </div>
     <div class="col">
-        <button [ngClass]="'w-100 btn btn-outline-'+c.name">{{c.description}} - Outline</button>
+        <button [ngClass]="'w-100 btn  btn-'+ form.value.size +' btn-outline-'+c.name">{{c.description}} - Outline</button>
     </div>
 </div>
