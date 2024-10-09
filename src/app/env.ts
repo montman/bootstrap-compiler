@@ -56,6 +56,13 @@ export const FONT_VARIABLES: Variable[] = [
     unit: "rem"
   }
 ];
+export const FONT_FAMILY_VARIABLES: Variable[] = [
+  {
+    name: 'font-family-sans-serif',
+    value: `system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default`,
+    description: 'Default Font'
+  }
+];
 export const RADIUS_VARIABLES: Variable[] = [
   {
     name: 'border-radius',

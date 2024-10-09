@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CompileService } from '../../services/compile.service';
-import { COLOR_VARIABLES, FONT_VARIABLES, RADIUS_VARIABLES } from '../../env';
+import { COLOR_VARIABLES, FONT_FAMILY_VARIABLES, FONT_VARIABLES, RADIUS_VARIABLES } from '../../env';
 @Component({
   selector: 'app-bs-settings',
   templateUrl: './bs-settings.component.html',
@@ -9,6 +9,7 @@ import { COLOR_VARIABLES, FONT_VARIABLES, RADIUS_VARIABLES } from '../../env';
 export class BsSettingsComponent {
   COLORS = COLOR_VARIABLES
   FONTS = FONT_VARIABLES
+  FONTFAMILY = FONT_FAMILY_VARIABLES
   RADIUS = RADIUS_VARIABLES;
   constructor(public cS: CompileService) { }
 }

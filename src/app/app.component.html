@@ -1,13 +1,20 @@
-<div class="container-fluid vh-100 p-0">
-  <div class="d-flex h-100">
-    <div class="col-7 position-relative">
-      <div class="position-absolute h-100 w-100 overflow-scroll p-3">
-        <app-preview></app-preview>
-      </div>
-    </div>
-    <div class="col-5 position-relative">
-      <div class="position-absolute h-100 w-100 overflow-scroll p-3">
-        <app-bs-settings></app-bs-settings>
+<div class="vh-100 d-flex flex-column">
+
+  <app-navbar></app-navbar>
+  <div class="flex-fill">
+
+    <div class="container-fluid h-100 p-0">
+      <div class="d-flex h-100">
+        <div class="col-7 position-relative">
+          <div class="position-absolute h-100 w-100 overflow-scroll p-3">
+            <app-preview></app-preview>
+          </div>
+        </div>
+        <div class="col-5 position-relative">
+          <div class="position-absolute h-100 w-100 overflow-scroll p-3">
+            <app-bs-settings></app-bs-settings>
+          </div>
+        </div>
       </div>
     </div>
   </div>

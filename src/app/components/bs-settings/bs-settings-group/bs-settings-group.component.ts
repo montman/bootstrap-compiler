@@ -12,6 +12,7 @@ export class BsSettingsGroupComponent implements OnInit {
   @Input() variables!: Variable[]
   @Input() className!: string
   @Input() formType!: string
+  @Input() title!: string
   @Input() step?: number
   @Input() observable!: BehaviorSubject<VariableStatus[]>
   form: FormGroup = new FormGroup({});

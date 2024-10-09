@@ -1,6 +1,10 @@
+<h5>{{title}}</h5>
 <form [formGroup]="form">
     <div *ngFor="let v of variables; index as i" class="mb-2">
-        <label [for]="i" class="form-label">{{v.description}}</label>
-        <input [id]="i" [ngClass]="className" [formControlName]="v.name" [type]="formType" [step]="step">
+        <div class="input-group mb-3">
+            <span class="input-group-text">{{v.description}}</span>
+            <input [id]="i" [ngClass]="className" [formControlName]="v.name" [type]="formType" [step]="step">
+            <span *ngIf="v.unit" class="input-group-text">{{v.unit}}</span>
+          </div>
     </div>
 </form>
