@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Variable, VariableStatus } from '../../../env';
 import { BehaviorSubject } from 'rxjs';
 import { FormControl, FormGroup } from '@angular/forms';
+import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-bs-settings-group',
@@ -10,12 +11,9 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class BsSettingsGroupComponent implements OnInit {
   @Input() variables!: Variable[]
-  @Input() className!: string
-  @Input() formType!: string
-  @Input() title!: string
-  @Input() step?: number
   @Input() observable!: BehaviorSubject<VariableStatus[]>
   form: FormGroup = new FormGroup({});
+  infoIcon = faCircleQuestion
   ngOnInit(): void {
     this.variables.forEach(el => {
       this.form.addControl(el.name, new FormControl(el.value))

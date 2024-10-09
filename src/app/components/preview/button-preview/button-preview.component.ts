@@ -11,5 +11,5 @@ export class ButtonPreviewComponent {
   form = new FormGroup({
     size: new FormControl(''),
   });
-  colors = COLOR_VARIABLES;
+  colors = COLOR_VARIABLES.filter(el => el.name != 'min-contrast-ratio');
 }
